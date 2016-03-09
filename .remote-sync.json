@@ -1,0 +1,14 @@
+{
+  "uploadOnSave": false,
+  "deleteLocal": false,
+  "hostname": "ftp.organicthemes.com",
+  "port": "22",
+  "target": "public_html/demo/wp-content/plugins/organic-shortcodes/",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "organic",
+  "password": "Invulu0812!",
+  "transport": "scp"
+}

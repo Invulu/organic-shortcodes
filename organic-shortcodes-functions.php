@@ -1,7 +1,7 @@
 <?php
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Toggle Box Shortcode		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Toggle Box Shortcode
 -------------------------------------------------------------------------------------------------------*/
 
 function organic_toggle( $atts, $content = null ) {
@@ -9,7 +9,7 @@ function organic_toggle( $atts, $content = null ) {
     extract(shortcode_atts(array(
     	'title'	=> 'Toggle Item',
    	), $atts));
-	
+
 	$out = '
 		<div class="toggle-box">
 		<p class="toggle-trigger"><a href="javascript:void(0);">' .$title. '</a></p>
@@ -20,25 +20,25 @@ function organic_toggle( $atts, $content = null ) {
 }
 add_shortcode('toggle', 'organic_toggle');
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Horizontal Rating Bar Shortcode	       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Horizontal Rating Bar Shortcode
 -------------------------------------------------------------------------------------------------------*/
 
-function organic_rating($atts) {  
+function organic_rating($atts) {
     extract(shortcode_atts(array(
-    	"title" => '',  
-        "number" => '50'  
-    ), $atts));  
-    return 
+    	"title" => '',
+        "number" => '50'
+    ), $atts));
+    return
     '<div class="rating-container">
     	<p class="rating-title">'.$title.'</p>
     	<div class="bar-rating"><span style="width:'.$number.'%;"></span></div>
-    </div>';  
+    </div>';
 }
 add_shortcode("rating", "organic_rating");
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Modal Box Shortcode		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Modal Box Shortcode
 -------------------------------------------------------------------------------------------------------*/
 
 function organic_modal( $atts, $content = null ) {
@@ -53,7 +53,7 @@ function organic_modal( $atts, $content = null ) {
 
 	$style = ($color) ? ' '.$color.'-btn' : '';
 	$align = ($align) ? ' align-'.$align : '';
-	
+
 	$out = '
 		<div class="modal-btn '.$align.'"><a class="organic-btn '.$style.' '.$size.'-btn '.$align.'" href="#'.$tag.'" rel="modal:open"><span class="btn-holder">' .$title. '</span></a></div>
 		<div id="' .$tag. '" class="organic-modal" style="display: none;"><span class="modal-title">' .$title. '</span>' .do_shortcode($content). '</div>';
@@ -62,8 +62,8 @@ function organic_modal( $atts, $content = null ) {
 }
 add_shortcode('modal', 'organic_modal');
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Accordion Shortcode		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Accordion Shortcode
 -------------------------------------------------------------------------------------------------------*/
 
 function organic_accordion($atts, $content = null) {
@@ -84,7 +84,7 @@ function organic_accordion($atts, $content = null) {
         }
     }
     $output = "\n".'<div class="organic-accordion">'. implode("\n", $panes) .'</div>'."\n";
-    
+
     unset( $GLOBALS["sections"] ); // Clear array fix for multiple shorcodes
     return $output;
 }
@@ -94,7 +94,7 @@ function organic_accordion_section($atts, $content = null) {
     extract(shortcode_atts(array(
         "name" => "Accordion Section Name"
     ), $atts));
-   
+
     $x = $GLOBALS["section_count"];
     $GLOBALS["sections"][$x] = array(
         "name"   => sprintf( $name, $GLOBALS["section_count"] ),
@@ -104,8 +104,8 @@ function organic_accordion_section($atts, $content = null) {
 }
 add_shortcode("section", "organic_accordion_section");
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Tabs Shortcode		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Tabs Shortcode
 -------------------------------------------------------------------------------------------------------*/
 
 function organic_tab_group( $atts, $content ){
@@ -113,49 +113,49 @@ function organic_tab_group( $atts, $content ){
 	$GLOBALS['tab_count'] = 0;
 
 	do_shortcode( $content );
-	
+
 	if( is_array( $GLOBALS['tabs'] ) ){
 		$int = '1';
 		foreach( $GLOBALS['tabs'] as $tab ){
-			
+
 			$tabs[] = '<li><a href="#panel-'.$int.'">'.$tab['title'].'</a></li>';
-			
+
 			$panes[] = '
 			<div class="ui-tabs-hide" id="panel-'.$int.'">
 				<h3>'.$tab['title'].'</h3>
 				'.$tab['content'].'
 			</div>';
-			
+
 			$int++;
 		}
-		
+
 		$return = "\n".'
 		<div class="organic-tabs">
 			<ul id="tabs">'.implode( "\n", $tabs ).'</ul>
 			'."\n".' '.implode( "\n", $panes ).'
-		</div>'."\n";		
+		</div>'."\n";
 	}
-	
+
 	unset( $GLOBALS['tabs'] ); // Clear array fix for multiple shorcodes
 	return $return;
 }
-add_shortcode( 'tabs', 'organic_tab_group' );	
+add_shortcode( 'tabs', 'organic_tab_group' );
 
 function organic_tab( $atts, $content ){
 	extract(shortcode_atts(array(
 		'title' => 'Tab %d'
 	), $atts));
-	
+
 	$x = $GLOBALS['tab_count'];
 	$GLOBALS['tabs'][$x] = array( 'title' => sprintf( $title, $GLOBALS['tab_count'] ), 'content' => do_shortcode($content) );
-	
+
 	$GLOBALS['tab_count']++;
 }
 add_shortcode( 'tab', 'organic_tab' );
 
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Icons Shortcode		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Icons Shortcode
 -------------------------------------------------------------------------------------------------------*/
 
 function organic_icons( $atts, $content = null ) {
@@ -164,15 +164,15 @@ function organic_icons( $atts, $content = null ) {
 	    'style'	=> '',
 	    'color'	=> '',
     ), $atts));
-	
+
 	$out = '<span class="organic-icon"><i class="fa fa-'.$style.'" style="color: #'.$color.';"></i> ' .do_shortcode($content). '</span>';
 
     return $out;
 }
 add_shortcode('icon', 'organic_icons');
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Headline Shortcode		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Headline Shortcode
 -------------------------------------------------------------------------------------------------------*/
 
 function organic_headline( $atts, $content = null ) {
@@ -182,15 +182,15 @@ function organic_headline( $atts, $content = null ) {
 	    'color'	=> '000000',
 	    'size'	=> 'large',
     ), $atts));
-	
+
 	$out = '<h2 class="organic-headline '.$size.'-headline" style="text-align: '.$align.'; color: #'.$color.';">' .do_shortcode($content). '</h2>';
 
     return $out;
 }
 add_shortcode('headline', 'organic_headline');
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Button Shortcode		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Button Shortcode
 -------------------------------------------------------------------------------------------------------*/
 
 function organic_button( $atts, $content = null ) {
@@ -213,8 +213,8 @@ function organic_button( $atts, $content = null ) {
 }
 add_shortcode('button', 'organic_button');
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Message Box Shortcode		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Message Box Shortcode
 -------------------------------------------------------------------------------------------------------*/
 
 function organic_box( $atts, $content = null ) {
@@ -226,15 +226,15 @@ function organic_box( $atts, $content = null ) {
 
 	$style = ($color) ? ' '.$color.'-box' : '';
 	$align = ($align) ? ' text-'.$align : '';
-	
+
 	$out = '<div class="organic-box '.$style.$align.'"><a href="#blank" class="close"><i class="fa fa-times"></i></a><div class="box-content">' .do_shortcode($content). '</div></div>';
-	
+
     return $out;
 }
 add_shortcode('box', 'organic_box');
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Column Shortcodes		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Column Shortcodes
 -------------------------------------------------------------------------------------------------------*/
 
 function organic_one_third( $atts, $content = null ) {
@@ -347,18 +347,18 @@ function organic_five_sixth_last( $atts, $content = null ) {
 }
 add_shortcode('five_sixth_last', 'organic_five_sixth_last');
 
-/*-----------------------------------------------------------------------------------------------------//	
-	Empty paragraph tag and line break fix for shortcodes		       	     	 
+/*-----------------------------------------------------------------------------------------------------//
+	Empty paragraph tag and line break fix for shortcodes
 -------------------------------------------------------------------------------------------------------*/
 
 if ( ! function_exists( 'organic_shortcodes_init' ) ) {
-	function shortcode_empty_paragraph_fix($content) {   
-	    $array = array (
-	        '<p>[' => '[', 
-	        ']</p>' => ']', 
-	        ']<br />' => ']'
+	function shortcode_empty_paragraph_fix($content) {
+    $array = array (
+	        '<p>[' => '[',
+	        ']</p>' => ']',
+          ']<br />' => ']'
 	    );
-	
+
 	    $content = strtr($content, $array);
 	    return $content;
 	}
