@@ -1,4 +1,4 @@
-Organic Shortcodes v1.0
+Organic Shortcodes v1.1
 http://www.organicthemes.com
 
 A set of simple shortcodes for use with Organic Themes. Examples and instruction for the shortcode usage can be found on Organic Themes demo sites.
@@ -10,3 +10,6 @@ INSTALL:
 
 CHANGELOG v1.0:
 - Initial build
+
+CHANGELOG v1.1:
+- PHP cleanup
