@@ -1,4 +1,4 @@
-Organic Shortcodes v1.1
+Organic Shortcodes v1.2
 http://www.organicthemes.com
 
 A set of simple shortcodes for use with Organic Themes. Examples and instruction for the shortcode usage can be found on Organic Themes demo sites.
@@ -13,3 +13,7 @@ CHANGELOG v1.0:
 
 CHANGELOG v1.1:
 - PHP cleanup
+
+CHANGELOG v1.2:
+- Allow for HTML in Tab, Toggle and Accordion titles
+- Cleaned up formatting of output

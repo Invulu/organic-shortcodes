@@ -3,18 +3,22 @@
  * Plugin Name: Organic Shortcodes
  * Plugin URI: http://organicthemes.com
  * Description: A set of simple shortcodes from Organic Themes. Contains shortcodes for buttons, columns, headlines, toggles, tabs, bar ratings, accordions, modal boxes, alert boxes and icons. Examples of the shortcodes can be found on the Organic Themes demo sites.
- * Version: 1.1
+ * Version: 1.2
  * GitHub Plugin URI: https://github.com/Invulu/organic-shortcodes
  * Author: Organic Themes
  * Author URI: http://organicthemes.com
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @package Organic Shortcodes
+ * @since Organic Shortcodes 1.0
  */
 
 // If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 if ( ! function_exists( 'organic_shortcodes_init' ) ) {
+
 	function organic_shortcodes_init() {
 
 		// Include Shortcode Functions.
@@ -25,6 +29,7 @@ if ( ! function_exists( 'organic_shortcodes_init' ) ) {
 add_action( 'init', 'organic_shortcodes_init', 20 );
 
 if ( ! function_exists( 'organic_shortcodes_enqueue_scripts' ) ) {
+
 	function organic_shortcodes_enqueue_scripts() {
 
 		// Enqueue Styles.

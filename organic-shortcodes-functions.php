@@ -16,13 +16,13 @@ function organic_toggle( $atts, $content = null ) {
 	);
 	$title = esc_attr( $args['title'] );
 
-	$out = '
+	$output = '
 		<div class="toggle-box">
-		<p class="toggle-trigger"><a href="javascript:void(0);">' .$title. '</a></p>
-		<div class="toggle-section"><p>' .do_shortcode( $content ). '</p></div>
+		<p class="toggle-trigger"><a href="javascript:void(0);">' .html_entity_decode( $title ). '</a></p>
+		<div class="toggle-section">' .do_shortcode( $content ). '</div>
 		</div>';
 
-	return $out;
+	return force_balance_tags( $output );
 }
 add_shortcode( 'toggle', 'organic_toggle' );
 
@@ -78,11 +78,11 @@ function organic_modal( $atts, $content = null ) {
 	$style = ($color) ? ' '.$color.'-btn' : '';
 	$position = ($align) ? ' align-'.$align : '';
 
-	$out = '
+	$output = '
 		<div class="modal-btn '.$position.'"><a class="organic-btn '.$style.' '.$size.'-btn '.$position.'" href="#'.$tag.'" rel="modal:open"><span class="btn-holder">' .$title. '</span></a></div>
 		<div id="' .$tag. '" class="organic-modal" style="display: none;"><span class="modal-title">' .$title. '</span>' .do_shortcode( $content ). '</div>';
 
-	return $out;
+	return $output;
 }
 add_shortcode( 'modal', 'organic_modal' );
 
@@ -117,7 +117,7 @@ function organic_accordion( $atts, $content = null ) {
 	$output = "\n".'<div class="organic-accordion">'. implode( "\n", $panes ) .'</div>'."\n";
 
 	unset( $GLOBALS['sections'] ); // Clear array fix for multiple shorcodes.
-	return $output;
+	return force_balance_tags( $output );
 }
 add_shortcode( 'accordion', 'organic_accordion' );
 
@@ -133,7 +133,7 @@ function organic_accordion_section( $atts, $content = null ) {
 
 	$x = $GLOBALS['section_count'];
 	$GLOBALS['sections'][ $x ] = array(
-		'name'   => sprintf( $name, $GLOBALS['section_count'] ),
+		'name'   => sprintf( html_entity_decode( $name ), $GLOBALS['section_count'] ),
 		'content' => do_shortcode( $content ),
 	);
 	$GLOBALS['section_count'] += 1;
@@ -167,7 +167,7 @@ function organic_tab_group( $atts, $content ) {
 			$int++;
 		}
 
-		$return = "\n".'
+		$output = "\n".'
 		<div class="organic-tabs">
 			<ul id="tabs">'.implode( "\n", $tabs ).'</ul>
 			'."\n".' '.implode( "\n", $panes ).'
@@ -175,7 +175,7 @@ function organic_tab_group( $atts, $content ) {
 	}
 
 	unset( $GLOBALS['tabs'] ); // Clear array fix for multiple shorcodes.
-	return $return;
+	return force_balance_tags( $output );
 }
 add_shortcode( 'tabs', 'organic_tab_group' );
 
@@ -190,7 +190,7 @@ function organic_tab( $atts, $content ) {
 	$title = esc_attr( $args['title'] );
 
 	$x = $GLOBALS['tab_count'];
-	$GLOBALS['tabs'][ $x ] = array( 'title' => sprintf( $title, $GLOBALS['tab_count'] ), 'content' => do_shortcode( $content ) );
+	$GLOBALS['tabs'][ $x ] = array( 'title' => sprintf( html_entity_decode( $title ), $GLOBALS['tab_count'] ), 'content' => do_shortcode( $content ) );
 
 	$GLOBALS['tab_count']++;
 }
@@ -215,9 +215,9 @@ function organic_icons( $atts, $content = null ) {
 	$style = esc_attr( $args['style'] );
 	$color = esc_attr( $args['color'] );
 
-	$out = '<span class="organic-icon"><i class="fa fa-'.$style.'" style="color: #'.$color.';"></i> ' .do_shortcode( $content ). '</span>';
+	$output = '<span class="organic-icon"><i class="fa fa-'.$style.'" style="color: #'.$color.';"></i> ' .do_shortcode( $content ). '</span>';
 
-	return $out;
+	return $output;
 }
 add_shortcode( 'icon', 'organic_icons' );
 
@@ -241,9 +241,9 @@ function organic_headline( $atts, $content = null ) {
 	$color = esc_attr( $args['color'] );
 	$size = esc_attr( $args['size'] );
 
-	$out = '<h2 class="organic-headline '.$size.'-headline" style="text-align: '.$align.'; color: #'.$color.';">' .do_shortcode( $content ). '</h2>';
+	$output = '<h2 class="organic-headline '.$size.'-headline" style="text-align: '.$align.'; color: #'.$color.';">' .do_shortcode( $content ). '</h2>';
 
-	return $out;
+	return $output;
 }
 add_shortcode( 'headline', 'organic_headline' );
 
@@ -275,9 +275,9 @@ function organic_button( $atts, $content = null ) {
 	$position = ($align) ? ' align-'.$align : '';
 	$location = ('blank' === $target) ? ' target="_blank"' : '';
 
-	$out = '<div class="btn-container '.$position.'"><a' .$location. ' class="organic-btn '.$style.' '.$size.'-btn '.$position.'" href="' .$link. '"><span class="btn-holder">' .do_shortcode( $content ). '</span></a></div>';
+	$output = '<div class="btn-container '.$position.'"><a' .$location. ' class="organic-btn '.$style.' '.$size.'-btn '.$position.'" href="' .$link. '"><span class="btn-holder">' .do_shortcode( $content ). '</span></a></div>';
 
-	return $out;
+	return $output;
 }
 add_shortcode( 'button', 'organic_button' );
 
@@ -301,9 +301,9 @@ function organic_box( $atts, $content = null ) {
 	$style = ($color) ? ' '.$color.'-box' : '';
 	$position = ($align) ? ' text-'.$align : '';
 
-	$out = '<div class="organic-box '.$style.$position.'"><a href="#blank" class="close"><i class="fa fa-times"></i></a><div class="box-content">' .do_shortcode( $content ). '</div></div>';
+	$output = '<div class="organic-box '.$style.$position.'"><a href="#blank" class="close"><i class="fa fa-times"></i></a><div class="box-content">' .do_shortcode( $content ). '</div></div>';
 
-	return $out;
+	return $output;
 }
 add_shortcode( 'box', 'organic_box' );
 
@@ -425,7 +425,7 @@ add_shortcode( 'five_sixth_last', 'organic_five_sixth_last' );
 
 /*
 -------------------------------------------------------------------------------------------------------
-	Empty paragraph tag and line break fix.
+	Empty paragraph, line break and content formatting fixes.
 -------------------------------------------------------------------------------------------------------
 */
 
@@ -433,14 +433,23 @@ if ( ! function_exists( 'organic_shortcodes_init' ) ) {
 
 	function shortcode_empty_paragraph_fix( $content ) {
 		$array = array(
-	        '<p>[' => '[',
-	        ']</p>' => ']',
-		  ']<br />' => ']',
+			'<p>[' => '[',
+			']</p>' => ']',
+			']<br />' => ']',
 	    );
 
 	    $content = strtr( $content, $array );
 	    return $content;
 	}
 	add_filter( 'the_content', 'shortcode_empty_paragraph_fix' );
+
+	function the_content_filter( $content ) {
+
+		$block = join( '|', array( 'tab', 'toggle', 'section' ) );
+		$rep = preg_replace( "/(<p>)?\[($block)(\s[^\]]+)?\](<\/p>|<br \/>)?/", '[$2$3]', $content );
+		$rep = preg_replace( "/(<p>)?\[\/($block)](<\/p>|<br \/>)?/", '[/$2]', $rep );
+		return $rep;
+	}
+	add_filter( 'the_content', 'the_content_filter' );
 
 }
