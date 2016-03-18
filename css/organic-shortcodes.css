@@ -45,7 +45,7 @@
 	margin: 0px;
 	padding: 6px 12px;
 	cursor: pointer;
-	border: 1px solid rgba(0,0,0, .08);
+	border: 1px solid rgba(0, 0, 0, .08);
 	zoom: 1;
 	}
 .toggle-trigger.active {
@@ -70,9 +70,9 @@ p.toggle-trigger.active:before {
 	margin: 0px;
 	padding: 0px 24px 12px 24px;
 	overflow: hidden;
-	border-left: 1px solid rgba(0,0,0, .08);
-	border-right: 1px solid rgba(0,0,0, .08);
-	border-bottom: 1px solid rgba(0,0,0, .08);
+	border-left: 1px solid rgba(0, 0, 0, .08);
+	border-right: 1px solid rgba(0, 0, 0, .08);
+	border-bottom: 1px solid rgba(0, 0, 0, .08);
 	}
 
 /************************************************
@@ -83,7 +83,7 @@ p.toggle-trigger.active:before {
 	display: block;
 	padding: 18px 0px;
 	overflow: hidden;
-	border-top: 1px solid rgba(0,0,0, .08);
+	border-top: 1px solid rgba(0, 0, 0, .08);
 	}
 .bar-rating {
 	float: left;
@@ -224,7 +224,7 @@ p.toggle-trigger.active:before {
 	margin-top: -1px;
 	padding: 6px 12px;
 	cursor: pointer;
-	border: 1px solid rgba(0,0,0, .08);
+	border: 1px solid rgba(0, 0, 0, .08);
 	zoom: 1;
 	}
 .ui-accordion .ui-accordion-header.ui-accordion-header-active {
@@ -249,7 +249,7 @@ p.toggle-trigger.active:before {
 .ui-accordion .ui-accordion-content {
 	margin-top: -1px;
 	padding: 18px 24px;
-	border: 1px solid rgba(0,0,0, .08);
+	border: 1px solid rgba(0, 0, 0, .08);
 	overflow: auto;
 	zoom: 1;
 	}
@@ -284,13 +284,13 @@ p.toggle-trigger.active:before {
 	margin: 0px;
 	padding: 0;
 	white-space: nowrap;
-	border-top: 1px solid rgba(0,0,0, .08);
-	border-right: 1px solid rgba(0,0,0, .08);
-	border-bottom: 1px solid rgba(0,0,0, .08);
+	border-top: 1px solid rgba(0, 0, 0, .08);
+	border-right: 1px solid rgba(0, 0, 0, .08);
+	border-bottom: 1px solid rgba(0, 0, 0, .08);
 	}
 .organic-tabs ul#tabs li:first-child,
 .ui-tabs .ui-tabs-nav li:first-child {
-	border-left: 1px solid rgba(0,0,0, .08);
+	border-left: 1px solid rgba(0, 0, 0, .08);
 	}
 .organic-tabs ul#tabs li.ui-tabs-active,
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
@@ -329,7 +329,7 @@ p.toggle-trigger.active:before {
 	border-width: 0;
 	margin-top: -1px;
 	padding: 12px 24px;
-	border: 1px solid rgba(0,0,0, .08);
+	border: 1px solid rgba(0, 0, 0, .08);
 	border-radius: 0px 3px 3px 3px;
 	-moz-border-radius: 0px 3px 3px 3px;
 	-khtml-border-radius: 0px 3px 3px 3px;
