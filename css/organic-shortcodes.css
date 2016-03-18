@@ -1,5 +1,5 @@
 /************************************************
-*	Headline									*
+*	Headline																			*
 ************************************************/
 
 .organic-headline {
@@ -25,7 +25,7 @@
 	}
 
 /************************************************
-*	Toggle Box									*
+*	Toggle Box																		*
 ************************************************/
 
 .toggle-box {
@@ -76,7 +76,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Horizontal Rating Bar 			     	    *
+*	Horizontal Rating Bar													*
 ************************************************/
 
 .rating-container {
@@ -123,7 +123,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Modal Box									*
+*	Modal Box																			*
 ************************************************/
 
 .organic-modal {
@@ -204,7 +204,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Accordion						   		    *
+*	Accordion																			*
 ************************************************/
 
 .organic-accordion {
@@ -255,7 +255,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Tabs							   		    *
+*	Tabs																					*
 ************************************************/
 
 .organic-tabs {
@@ -344,7 +344,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Icons							   		    *
+*	Icons																					*
 ************************************************/
 
 .organic-icon i {
@@ -356,7 +356,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Buttons							   		    *
+*	Buttons																				*
 ************************************************/
 
 .organic-btn {
@@ -482,7 +482,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Alert Boxes						   		    *
+*	Alert Boxes																		*
 ************************************************/
 
 .organic-box {
@@ -609,7 +609,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Columns							   		    *
+*	Columns																				*
 ************************************************/
 
 .organic-column {
@@ -626,10 +626,10 @@ p.toggle-trigger.active:before {
 	}
 .organic-column:after {
 	content: '';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 	}
 .organic-column.one-half {
 	width: 48%;
