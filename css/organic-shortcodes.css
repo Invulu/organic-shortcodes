@@ -36,22 +36,22 @@
 	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .08);
 	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .08);
 	}
-.toggle-trigger { 
+.toggle-trigger {
 	display: block;
 	background: #FFFFFF;
-	position: relative; 
+	position: relative;
 	font-size: 1em;
 	font-weight: bold;
 	margin: 0px;
 	padding: 6px 12px;
-	cursor: pointer; 
+	cursor: pointer;
 	border: 1px solid rgba(0,0,0, .08);
-	zoom: 1; 
+	zoom: 1;
 	}
 .toggle-trigger.active {
-	border-bottom: none; 
+	border-bottom: none;
 	}
-p.toggle-trigger:before { 
+p.toggle-trigger:before {
 	color: #999999;
 	font-family: 'FontAwesome';
 	font-weight: normal;
@@ -59,7 +59,7 @@ p.toggle-trigger:before {
 	margin-right: 8px;
 	}
 p.toggle-trigger.active:before {
-	content: "\f068"; 
+	content: "\f068";
 	}
 .toggle-trigger a {
 	text-decoration: none;
@@ -74,9 +74,9 @@ p.toggle-trigger.active:before {
 	border-right: 1px solid rgba(0,0,0, .08);
 	border-bottom: 1px solid rgba(0,0,0, .08);
 	}
-	
+
 /************************************************
-*	Horizontal Rating Bar 			     	    * 
+*	Horizontal Rating Bar 			     	    *
 ************************************************/
 
 .rating-container {
@@ -85,7 +85,7 @@ p.toggle-trigger.active:before {
 	overflow: hidden;
 	border-top: 1px solid rgba(0,0,0, .08);
 	}
-.bar-rating { 
+.bar-rating {
 	float: left;
 	background: #F9F9F9;
 	width: 70%;
@@ -156,7 +156,7 @@ p.toggle-trigger.active:before {
 	width: 100%;
 	overflow: hidden;
 	}
-.modal-btn.align-right, 
+.modal-btn.align-right,
 .modal-btn.align-left {
 	float: none;
 	}
@@ -204,7 +204,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Accordion						   		    * 
+*	Accordion						   		    *
 ************************************************/
 
 .organic-accordion {
@@ -215,17 +215,17 @@ p.toggle-trigger.active:before {
 	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .08);
 	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .08);
 	}
-.ui-accordion .ui-accordion-header { 
+.ui-accordion .ui-accordion-header {
 	display: block;
 	background: #F9F9F9;
-	position: relative; 
+	position: relative;
 	font-size: 1em;
 	font-weight: bold;
-	margin-top: -1px; 
+	margin-top: -1px;
 	padding: 6px 12px;
-	cursor: pointer; 
+	cursor: pointer;
 	border: 1px solid rgba(0,0,0, .08);
-	zoom: 1; 
+	zoom: 1;
 	}
 .ui-accordion .ui-accordion-header.ui-accordion-header-active {
 	background: #FFFFFF;
@@ -236,7 +236,7 @@ p.toggle-trigger.active:before {
 .ui-accordion .ui-accordion-header.ui-accordion-header-active a {
 	color: #333333;
 	}
-.ui-accordion .ui-accordion-header a:before { 
+.ui-accordion .ui-accordion-header a:before {
 	color: #999999;
 	font-family: 'FontAwesome';
 	font-weight: normal;
@@ -244,18 +244,18 @@ p.toggle-trigger.active:before {
 	margin-right: 8px;
 	}
 .ui-accordion .ui-accordion-header.ui-accordion-header-active a:before {
-	content: "\f068"; 
-	}	
-.ui-accordion .ui-accordion-content { 
+	content: "\f068";
+	}
+.ui-accordion .ui-accordion-content {
 	margin-top: -1px;
-	padding: 18px 24px; 
-	border: 1px solid rgba(0,0,0, .08); 
-	overflow: auto; 
-	zoom: 1; 
+	padding: 18px 24px;
+	border: 1px solid rgba(0,0,0, .08);
+	overflow: auto;
+	zoom: 1;
 	}
 
 /************************************************
-*	Tabs							   		    * 
+*	Tabs							   		    *
 ************************************************/
 
 .organic-tabs {
@@ -263,25 +263,25 @@ p.toggle-trigger.active:before {
 	margin: 12px 0px;
 	}
 .organic-tabs,
-.ui-tabs { 
-	position: relative; 
-	padding: 0px; 
-	zoom: 1; 
+.ui-tabs {
+	position: relative;
+	padding: 0px;
+	zoom: 1;
 	}
 .organic-tabs ul#tabs,
-.ui-tabs .ui-tabs-nav { 
-	margin: 0px; 
-	padding: 0px; 
+.ui-tabs .ui-tabs-nav {
+	margin: 0px;
+	padding: 0px;
 	overflow: hidden;
 	}
 .organic-tabs ul#tabs li,
-.ui-tabs .ui-tabs-nav li { 
+.ui-tabs .ui-tabs-nav li {
 	float: left;
 	background: #f9f9f9;
-	list-style: none;  
-	position: relative; 
-	top: 0; 
-	margin: 0px; 
+	list-style: none;
+	position: relative;
+	top: 0;
+	margin: 0px;
 	padding: 0;
 	white-space: nowrap;
 	border-top: 1px solid rgba(0,0,0, .08);
@@ -289,21 +289,21 @@ p.toggle-trigger.active:before {
 	border-bottom: 1px solid rgba(0,0,0, .08);
 	}
 .organic-tabs ul#tabs li:first-child,
-.ui-tabs .ui-tabs-nav li:first-child { 
+.ui-tabs .ui-tabs-nav li:first-child {
 	border-left: 1px solid rgba(0,0,0, .08);
 	}
 .organic-tabs ul#tabs li.ui-tabs-active,
-.ui-tabs .ui-tabs-nav li.ui-tabs-active { 
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
 	background: #ffffff;
-	margin-bottom: -1px; 
+	margin-bottom: -1px;
 	padding-bottom: 1px;
 	}
 .organic-tabs ul#tabs li a,
-.ui-tabs .ui-tabs-nav li a { 
+.ui-tabs .ui-tabs-nav li a {
 	float: left;
 	color: #999999;
 	font-weight: bold;
-	padding: 4px 12px; 
+	padding: 4px 12px;
 	text-decoration: none;
 	}
 .organic-tabs ul#tabs li.ui-tabs-active a,
@@ -313,22 +313,22 @@ p.toggle-trigger.active:before {
 .organic-tabs ul#tabs li.ui-tabs-active a,
 .organic-tabs ul#tabs li.ui-state-disabled a,
 .organic-tabs ul#tabs li.ui-tabs-loading a,
-.ui-tabs .ui-tabs-nav li.ui-tabs-active a, 
-.ui-tabs .ui-tabs-nav li.ui-state-disabled a, 
-.ui-tabs .ui-tabs-nav li.ui-tabs-loading a { 
-	cursor: inherit; 
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+	cursor: inherit;
 	}
 .organic-tabs ul#tabs li a,
-.ui-tabs .ui-tabs-nav li a, 
-.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a { 
-	cursor: pointer; 
+.ui-tabs .ui-tabs-nav li a,
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+	cursor: pointer;
 	}
 .organic-tabs div[id^=panel],
-.ui-tabs .ui-tabs-panel { 
+.ui-tabs .ui-tabs-panel {
 	background: #FFFFFF;
 	border-width: 0;
 	margin-top: -1px;
-	padding: 12px 24px; 
+	padding: 12px 24px;
 	border: 1px solid rgba(0,0,0, .08);
 	border-radius: 0px 3px 3px 3px;
 	-moz-border-radius: 0px 3px 3px 3px;
@@ -339,12 +339,12 @@ p.toggle-trigger.active:before {
 	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .08);
 	overflow: hidden;
 	}
-.ui-tabs-hide { 
-	display: none; 
+.ui-tabs-hide {
+	display: none;
 	}
 
 /************************************************
-*	Icons							   		    * 
+*	Icons							   		    *
 ************************************************/
 
 .organic-icon i {
@@ -356,7 +356,7 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Buttons							   		    * 
+*	Buttons							   		    *
 ************************************************/
 
 .organic-btn {
@@ -424,7 +424,7 @@ p.toggle-trigger.active:before {
 	background-color: #ff0000;
 	}
 .organic-btn.dark-red-btn {
-	background-color: #0099ff;
+	background-color: #990000;
 	}
 .organic-btn.yellow-btn {
 	background-color: #ffcc00;
@@ -482,9 +482,9 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Alert Boxes						   		    * 
+*	Alert Boxes						   		    *
 ************************************************/
-	
+
 .organic-box {
 	display: block;
 	margin: 12px 0px;
@@ -526,7 +526,7 @@ p.toggle-trigger.active:before {
 	text-decoration: none;
 	margin: 16px 12px;
 	padding: 4px;
-	opacity: .7; 
+	opacity: .7;
 	filter: alpha(opacity=70);
 	border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -540,7 +540,7 @@ p.toggle-trigger.active:before {
 	color: #333333 !important;
 	background: rgba(0, 0, 0, .08);
 	text-decoration: none;
-	opacity: 1; 
+	opacity: 1;
 	filter: alpha(opacity=100);
 	}
 .organic-box.text-center {
@@ -609,20 +609,20 @@ p.toggle-trigger.active:before {
 	}
 
 /************************************************
-*	Columns							   		    * 
+*	Columns							   		    *
 ************************************************/
 
 .organic-column {
 	float: left;
-	position: relative; 
+	position: relative;
 	margin-right: 4%;
 	padding-top: 18px;
 	padding-bottom: 18px;
 	}
 .organic-column.last {
 	float: right;
-	margin-right: 0 !important; 
-	clear: right; 
+	margin-right: 0 !important;
+	clear: right;
 	}
 .organic-column:after {
 	content: '';
@@ -631,57 +631,54 @@ p.toggle-trigger.active:before {
     clear: both;
     visibility: hidden;
 	}
-.organic-column.one-half { 
-	width: 48%; 
+.organic-column.one-half {
+	width: 48%;
 	}
-.organic-column.one-third { 
-	width: 30.66%; 
+.organic-column.one-third {
+	width: 30.66%;
 	}
-.organic-column.two-third { 
-	width: 65.33%; 
+.organic-column.two-third {
+	width: 65.33%;
 	}
-.organic-column.one-fourth { 
-	width: 22%; 
+.organic-column.one-fourth {
+	width: 22%;
 	}
-.organic-column.three-fourth { 
-	width: 74%; 
+.organic-column.three-fourth {
+	width: 74%;
 	}
-.organic-column.one-fifth { 
-	width: 16.8%; 
+.organic-column.one-fifth {
+	width: 16.8%;
 	}
-.organic-column.two-fifth { 
-	width: 37.6%; 
+.organic-column.two-fifth {
+	width: 37.6%;
 	}
-.organic-column.three-fifth { 
-	width: 58.4%; 
+.organic-column.three-fifth {
+	width: 58.4%;
 	}
-.organic-column.four-fifth { 
-	width: 67.2%; 
+.organic-column.four-fifth {
+	width: 67.2%;
 	}
-.organic-column.one-sixth { 
-	width: 13.33%; 
+.organic-column.one-sixth {
+	width: 13.33%;
 	}
-.organic-column.five-sixth { 
-	width: 82.67%; 
+.organic-column.five-sixth {
+	width: 82.67%;
 	}
-.clearboth { 
+.clearboth {
 	clear: both;
-	display: block; 
+	display: block;
 	font-size: 0;
 	height: 0;
 	line-height: 0;
 	width: 100%;
 	}
-	
+
 /* Responsive iPhone Styles */
 
-@media only screen and (max-width: 767px) {		
-	
+@media only screen and (max-width: 767px) {
+
 	.ui-tabs .ui-tabs-nav li a {
 		font-size: 0.7em;
-		}
-	.organic-column {
-		padding: 8px 0px;
 		}
 	.organic-headline {
 		font-size: 1.6rem;
@@ -691,13 +688,20 @@ p.toggle-trigger.active:before {
 		font-size: 1.2rem;
 		letter-spacing: -0.4px;
 		}
-	.one-half, .one-third, .two-third, .three-fourth, .one-fourth, .one-fifth, 
-	.two-fifth, .three-fifth, .four-fifth, .one-sixth, .five-sixth {
+	.organic-column {
+		padding: 12px 0px;
+		}
+	.one-half, .one-third, .two-third, .three-fourth, .one-fourth,
+	.one-fifth, .two-fifth, .three-fifth, .four-fifth, .one-sixth, .five-sixth,
+	.organic-column.one-half, .organic-column.one-third, .organic-column.two-third,
+	.organic-column.three-fourth, .organic-column.one-fourth, .organic-column.one-fifth,
+	.organic-column.two-fifth, .organic-column.three-fifth, .organic-column.four-fifth,
+	.organic-column.one-sixth, .organic-column.five-sixth {
 		float: none;
 		width: 100%;
 		margin-right: 0px;
 		}
-	.bar-rating { 
+	.bar-rating {
 		width: 96%;
 		padding: 2%;
 		}
@@ -716,5 +720,5 @@ p.toggle-trigger.active:before {
 		margin: 0px !important;
 		z-index: 99;
 		}
-	
+
 	}
