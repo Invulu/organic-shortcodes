@@ -429,26 +429,6 @@ add_shortcode( 'five_sixth_last', 'organic_five_sixth_last' );
 -------------------------------------------------------------------------------------------------------
 */
 
-if ( ! function_exists( 'organic_shortcodes_init' ) ) {
-
-	function shortcode_empty_paragraph_fix( $content ) {
-		$array = array(
-			'<p>[' => '[',
-			']</p>' => ']',
-			']<br />' => ']',
-		);
-
-		$content = strtr( $content, $array );
-		return $content;
-	}
-	add_filter( 'the_content', 'shortcode_empty_paragraph_fix' );
-
-	function the_content_filter( $content ) {
-		$block = join( '|', array( 'tab', 'toggle', 'section' ) );
-		$rep = preg_replace( "/(<p>)?\[($block)(\s[^\]]+)?\](<\/p>|<br \/>)?/", '[$2$3]', $content );
-		$rep = preg_replace( "/(<p>)?\[\/($block)](<\/p>|<br \/>)?/", '[/$2]', $rep );
-		return $rep;
-	}
-	add_filter( 'the_content', 'the_content_filter' );
-
-}
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop' , 99 );
+add_filter( 'the_content', 'shortcode_unautop',100 );

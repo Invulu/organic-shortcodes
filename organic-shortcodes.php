@@ -3,7 +3,7 @@
  * Plugin Name: Organic Shortcodes
  * Plugin URI: http://organicthemes.com
  * Description: A set of simple shortcodes from Organic Themes. Contains shortcodes for buttons, columns, headlines, toggles, tabs, bar ratings, accordions, modal boxes, alert boxes and icons. Examples of the shortcodes can be found on the Organic Themes demo sites.
- * Version: 1.2
+ * Version: 1.2.2
  * GitHub Plugin URI: https://github.com/Invulu/organic-shortcodes
  * Author: Organic Themes
  * Author URI: http://organicthemes.com

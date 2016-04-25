@@ -1,4 +1,4 @@
-Organic Shortcodes v1.2.1
+Organic Shortcodes v1.2.2
 http://www.organicthemes.com
 
 A set of simple shortcodes for use with Organic Themes. Examples and instruction for the shortcode usage can be found on Organic Themes demo sites.
@@ -21,3 +21,6 @@ CHANGELOG v1.2:
 CHANGELOG v1.2.1:
 - Fixed mobile styling for columns
 - Fixed dark red button color style
+
+CHANGELOG v1.2.2:
+- Fixed paragraph and line breaks in shortcodes
