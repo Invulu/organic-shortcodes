@@ -429,6 +429,15 @@ add_shortcode( 'five_sixth_last', 'organic_five_sixth_last' );
 -------------------------------------------------------------------------------------------------------
 */
 
-remove_filter( 'the_content', 'wpautop' );
-add_filter( 'the_content', 'wpautop' , 99 );
-add_filter( 'the_content', 'shortcode_unautop',100 );
+if ( ! function_exists( 'organic_fix_shortcodes' ) ) {
+	function organic_fix_shortcodes( $content ) {
+		$array = array(
+			'<p>[' => '[',
+			']</p>' => ']',
+			']<br />' => ']',
+		);
+		$content = strtr( $content, $array );
+		return $content;
+	}
+	add_filter( 'the_content', 'organic_fix_shortcodes' );
+}

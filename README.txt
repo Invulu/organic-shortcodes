@@ -1,4 +1,4 @@
-Organic Shortcodes v1.2.2
+Organic Shortcodes v1.2.3
 http://www.organicthemes.com
 
 A set of simple shortcodes for use with Organic Themes. Examples and instruction for the shortcode usage can be found on Organic Themes demo sites.
@@ -24,3 +24,6 @@ CHANGELOG v1.2.1:
 
 CHANGELOG v1.2.2:
 - Fixed paragraph and line breaks in shortcodes
+
+CHANGELOG v1.2.3:
+- Better fix for paragraph tags and line breaks in shortcodes
