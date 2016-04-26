@@ -68,7 +68,7 @@ p.toggle-trigger.active:before {
 	display: none;
 	background: #FFFFFF;
 	margin: 0px;
-	padding: 0px 24px 12px 24px;
+	padding: 12px 24px;
 	overflow: hidden;
 	border-left: 1px solid rgba(0, 0, 0, .08);
 	border-right: 1px solid rgba(0, 0, 0, .08);

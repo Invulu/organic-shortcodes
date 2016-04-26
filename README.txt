@@ -27,3 +27,4 @@ CHANGELOG v1.2.2:
 
 CHANGELOG v1.2.3:
 - Better fix for paragraph tags and line breaks in shortcodes
+- Style tweak
