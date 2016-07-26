@@ -33,24 +33,24 @@ if ( ! function_exists( 'organic_shortcodes_enqueue_scripts' ) ) {
 	function organic_shortcodes_enqueue_scripts() {
 
 		// Enqueue Styles.
-		wp_enqueue_style( 'organic-shortcodes', plugin_dir_url( dirname( __FILE__ ) ) . '/organic-shortcodes/css/organic-shortcodes.css', array(), '1.0' );
-		wp_enqueue_style( 'font-awesome', plugin_dir_url( dirname( __FILE__ ) ) . '/organic-shortcodes/css/font-awesome.css', array( 'organic-shortcodes' ), '1.0' );
+		wp_enqueue_style( 'organic-shortcodes', plugin_dir_url( dirname( __FILE__ ) ) . 'organic-shortcodes/css/organic-shortcodes.css', array(), '1.0' );
+		wp_enqueue_style( 'font-awesome', plugin_dir_url( dirname( __FILE__ ) ) . 'organic-shortcodes/css/font-awesome.css', array( 'organic-shortcodes' ), '1.0' );
 
 		// IE Conditional Styles.
 		global $wp_styles;
 		$wp_styles->add_data( 'organic-shortcodes-ie8', 'conditional', 'lt IE 9' );
 
 		// Resgister Scripts.
-		wp_register_script( 'organic-modal', plugin_dir_url( dirname( __FILE__ ) ) . '/organic-shortcodes/js/jquery.modal.min.js', array( 'jquery' ), '20130729' );
+		wp_register_script( 'organic-modal', plugin_dir_url( dirname( __FILE__ ) ) . 'organic-shortcodes/js/jquery.modal.min.js', array( 'jquery' ), '20130729' );
 
 		// Enqueue Scripts.
-		wp_enqueue_script( 'organic-shortcodes-script', plugin_dir_url( dirname( __FILE__ ) ) . '/organic-shortcodes/js/jquery.shortcodes.js', array( 'jquery', 'organic-modal', 'jquery-ui-accordion', 'jquery-ui-dialog' ), '20130729', true );
+		wp_enqueue_script( 'organic-shortcodes-script', plugin_dir_url( dirname( __FILE__ ) ) . 'organic-shortcodes/js/jquery.shortcodes.js', array( 'jquery', 'organic-modal', 'jquery-ui-accordion', 'jquery-ui-dialog' ), '20130729', true );
 
 		// Enqueue jQuery UI Tabs code only if not in the Customizer.
 		// http://core.trac.wordpress.org/ticket/23225.
 		global $wp_customize;
 		if ( ! isset( $wp_customize ) ) {
-			wp_enqueue_script( 'organic-tabs', plugin_dir_url( dirname( __FILE__ ) ) . '/organic-shortcodes/js/tabs.js', array( 'jquery', 'jquery-ui-tabs' ), '20130609', true );
+			wp_enqueue_script( 'organic-tabs', plugin_dir_url( dirname( __FILE__ ) ) . 'organic-shortcodes/js/tabs.js', array( 'jquery', 'jquery-ui-tabs' ), '20130609', true );
 		}
 
 	}
