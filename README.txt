@@ -1,4 +1,4 @@
-Organic Shortcodes v1.2.4
+Organic Shortcodes v1.2.5
 http://www.organicthemes.com
 
 A set of simple shortcodes for use with Organic Themes. Examples and instruction for the shortcode usage can be found on Organic Themes demo sites.
@@ -31,3 +31,6 @@ CHANGELOG v1.2.3:
 
 CHANGELOG v1.2.4:
 - Remove extra slash
+
+CHANGELOG v1.2.5:
+- Fix red alert box text color
