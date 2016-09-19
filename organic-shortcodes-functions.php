@@ -79,8 +79,8 @@ function organic_modal( $atts, $content = null ) {
 	$position = ($align) ? ' align-'.$align : '';
 
 	$output = '
-		<div class="modal-btn '.$position.'"><a class="organic-btn '.$style.' '.$size.'-btn '.$position.'" href="#'.$tag.'" rel="modal:open"><span class="btn-holder">' .$title. '</span></a></div>
-		<div id="' .$tag. '" class="organic-modal" style="display: none;"><span class="modal-title">' .$title. '</span>' .do_shortcode( $content ). '</div>';
+		<div class="modal modal-btn '.$position.'"><a class="organic-btn '.$style.' '.$size.'-btn '.$position.'" href="#' .$tag. '" rel="modal:open"><span class="btn-holder">' .$title. '</span></a></div>
+		<div id="' .$tag. '" class="modal organic-modal" style="display: none;"><span class="modal-title">' .$title. '</span>' .do_shortcode( $content ). '</div>';
 
 	return $output;
 }
@@ -108,8 +108,8 @@ function organic_accordion( $atts, $content = null ) {
 	// Generate output.
 	if ( is_array( $GLOBALS['sections'] ) ) {
 		foreach ( $GLOBALS['sections'] as $section ) {
-			$panes[] = '<p><a href="#'. str_replace( ' ', '-', strtolower( $section['name'] ) ) .'">'. $section['name'] .'</a></p>
-            <div id="'. str_replace( ' ', '-', strtolower( $section['name'] ) ) .'">
+			$panes[] = '<p><a href="javascript:void(0);">'. $section['name'] .'</a></p>
+            <div id="'. esc_attr( str_replace( ' ', '-', strtolower( $section['name'] ) ) ).'">
             	'. do_shortcode( $section['content'] ) .'
             </div>';
 		}
