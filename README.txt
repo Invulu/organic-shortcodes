@@ -1,4 +1,4 @@
-Organic Shortcodes v1.2.6
+Organic Shortcodes v1.2.7
 http://www.organicthemes.com
 
 A set of simple shortcodes for use with Organic Themes. Examples and instruction for the shortcode usage can be found on Organic Themes demo sites.
@@ -38,3 +38,6 @@ CHANGELOG v1.2.5:
 CHANGELOG v1.2.6:
 - Fix accordion elements
 - Modal code update
+
+CHANGELOG v1.2.7:
+- Update FontAwesome to 4.7.0
