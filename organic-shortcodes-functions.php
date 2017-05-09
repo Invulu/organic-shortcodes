@@ -209,13 +209,17 @@ function organic_icons( $atts, $content = null ) {
 		array(
 			'style'	=> '',
 			'color'	=> '',
+			'size'	=> '',
+			'align'	=> '',
 		),
 		$atts
 	);
 	$style = esc_attr( $args['style'] );
 	$color = esc_attr( $args['color'] );
+	$size = esc_attr( $args['size'] );
+	$align = esc_attr( $args['align'] );
 
-	$output = '<span class="organic-icon"><i class="fa fa-'.$style.'" style="color: #'.$color.';"></i> ' .do_shortcode( $content ). '</span>';
+	$output = '<span class="organic-icon" style="text-align: '.$align.';"><i class="fa fa-'.$style.'" style="color: #'.$color.'; font-size: '.$size.'px;"></i> ' .do_shortcode( $content ). '</span>';
 
 	return $output;
 }
@@ -275,7 +279,7 @@ function organic_button( $atts, $content = null ) {
 	$position = ($align) ? ' align-'.$align : '';
 	$location = ('blank' === $target) ? ' target="_blank"' : '';
 
-	$output = '<div class="btn-container '.$position.'"><a' .$location. ' class="organic-btn '.$style.' '.$size.'-btn '.$position.'" href="' .$link. '"><span class="btn-holder">' .do_shortcode( $content ). '</span></a></div>';
+	$output = '<div class="btn-container'.$position.'"><a '.$location.' class="organic-btn'.$style.' '.$size.'-btn'.$position.'" href="' .$link. '"><span class="btn-holder">' .do_shortcode( $content ). '</span></a></div>';
 
 	return $output;
 }
