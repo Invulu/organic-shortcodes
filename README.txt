@@ -1,4 +1,4 @@
-Organic Shortcodes v1.2.8
+Organic Shortcodes v1.3
 http://www.organicthemes.com
 
 A set of simple shortcodes for use with Organic Themes. Examples and instruction for the shortcode usage can be found on Organic Themes demo sites.
@@ -45,3 +45,8 @@ CHANGELOG v1.2.7:
 CHANGELOG v1.2.8:
 - Icon style tweaks
 - Button style tweaks
+
+CHANGELOG v1.3:
+- Added necessary prefixes
+- Fixed PHP code sniffer issues
+- Removed old IE support
